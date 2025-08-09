@@ -39,7 +39,7 @@ const ContactSection = forwardRef<HTMLElement>((props, ref) => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-heading"
         >
-          Let&apos;s Connect
+          Let&apos;s connect!
         </motion.h2>
 
         <motion.p
@@ -55,9 +55,15 @@ const ContactSection = forwardRef<HTMLElement>((props, ref) => {
           possible ;)
         </motion.p>
 
-        <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
           <OnlineStatus />
-        </div>
+        </motion.div>
 
         <div className="mb-16">
           <ContactForm />
