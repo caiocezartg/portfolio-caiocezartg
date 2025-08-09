@@ -39,9 +39,9 @@ const BentoGridSection = forwardRef<HTMLElement>((props, ref) => {
       className="flex items-center justify-center px-4 py-12"
     >
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <BentoCard
-            className="md:col-span-2 lg:col-span-2 lg:row-span-2 md:pb-0"
+            className="md:col-span-3 lg:col-span-2 lg:row-span-2 md:pb-0"
             delay={0}
           >
             <div className="h-full flex flex-col justify-start relative">
@@ -84,7 +84,7 @@ const BentoGridSection = forwardRef<HTMLElement>((props, ref) => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-start md:pb-40 lg:pb-0">
                   <Gamepad2 className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-text-secondary text-lg">
@@ -96,7 +96,6 @@ const BentoGridSection = forwardRef<HTMLElement>((props, ref) => {
             </div>
           </BentoCard>
 
-          {/* Tech Stack */}
           <BentoCard className="lg:col-span-2" delay={0.1}>
             <h3 className="text-xl font-bold text-foreground mb-4 font-heading">
               Some stacks that I&apos;ve worked with
@@ -107,8 +106,8 @@ const BentoGridSection = forwardRef<HTMLElement>((props, ref) => {
                   key={tech.name}
                   className="flex flex-col items-center p-3 rounded-xl bg-card-bg border border-card-border hover:border-accent transition-colors"
                 >
-                  <tech.icon className="w-8 h-8 text-accent mb-2" />
-                  <span className="text-sm text-text-secondary font-medium">
+                  <tech.icon className="w-7 h-7 lg:w-8 lg:h-8 text-accent lg:mb-2 my-auto lg:my-0" />
+                  <span className="text-sm text-text-secondary font-medium hidden lg:block">
                     {tech.name}
                   </span>
                 </div>
@@ -116,7 +115,6 @@ const BentoGridSection = forwardRef<HTMLElement>((props, ref) => {
             </div>
           </BentoCard>
 
-          {/* GitHub */}
           <BentoCard className="lg:col-span-1" delay={0.2}>
             <div className="h-full flex flex-col justify-start">
               <div className="flex items-center mb-4">
@@ -126,7 +124,7 @@ const BentoGridSection = forwardRef<HTMLElement>((props, ref) => {
                 </h3>
               </div>
               <p className="text-text-secondary mb-6 text-sm">
-                Check out my projects and open source contributions
+                Check out my projects in my GitHub profile
               </p>
               <a
                 href="https://github.com/caiocezartg"
@@ -140,17 +138,16 @@ const BentoGridSection = forwardRef<HTMLElement>((props, ref) => {
             </div>
           </BentoCard>
 
-          {/* Fun Fact */}
           <BentoCard className="lg:col-span-1" delay={0.3}>
             <div className="h-full flex flex-col justify-start">
               <div className="flex items-center mb-4">
                 <Coffee className="w-8 h-8 text-accent mr-3" />
                 <h3 className="text-xl font-bold text-foreground font-heading">
-                  Fun Fact
+                  Random fact
                 </h3>
               </div>
               <p className="text-text-secondary text-sm">
-                Lover of coffee and clean code. In my spare time, I enjoy
+                Lover of coffee and Lego sets. In my spare time, I enjoy
                 exploring the world of indie games and discovering new design
                 patterns.
               </p>
