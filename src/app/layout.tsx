@@ -17,8 +17,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Caio Cezar - Frontend Developer",
-  description: "Building cool stuffs with React.js, Next.js, and modern web technologies",
+  title: "Caio Cezar",
+  description: "My personal website containing some details about me ;)",
 };
 
 export default function RootLayout({
